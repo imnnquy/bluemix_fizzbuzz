@@ -1,0 +1,23 @@
+{
+  "name": "bluemix_fizzbuzz",
+  "version": "0.0.0",
+  "description": "REST API to calculate FizzBuzz value for a give range",
+  "main": "server.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nnquy/bluemix_fizzbuzz.git"
+  },
+  "author": "Quy Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnquy/bluemix_fizzbuzz/issues"
+  },
+  "homepage": "https://github.com/nnquy/bluemix_fizzbuzz",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "mocha-jshint": "^2.2.6"
+  }
+}
