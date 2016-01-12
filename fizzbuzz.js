@@ -19,12 +19,16 @@ FizzBuzz.prototype.convertToFizzBuzz = function(number) {
 };
 
 FizzBuzz.prototype.convertRangeToFizzBuzz = function(start, end) {
+	console.log("quy log start: " + start);
+	console.log("quy log end: " + end);
 	var result = [];
 	var from = parseInt(start);
 	var to = parseInt(end);
 	for (var i = from; i <= to; i++) {
+		console.log("quy log current: " + i);
 		result.push(this.convertToFizzBuzz(i));
 	}
+	console.log("quy log result: ", result);
 	return result;
 };
 
