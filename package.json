@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nnquy/bluemix_fizzbuzz",
   "devDependencies": {
+    "chai": "^3.4.1",
     "mocha": "^2.3.4",
     "mocha-jshint": "^2.2.6"
   }
