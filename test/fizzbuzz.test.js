@@ -1,3 +1,4 @@
+var sinon = require("sinon");
 var FizzBuzz = require("../fizzbuzz.js");
 describe("Fizzbuzz", function() {
 	var f = new FizzBuzz();
@@ -26,6 +27,23 @@ describe("Fizzbuzz", function() {
 		it("when not divisible by 3, 5 or 15", function() {
 			expect(f.convertToFizzBuzz(4)).to.be.eql("4");
 			expect(f.convertToFizzBuzz(7)).to.be.eql("7");
+		});
+	});
+
+	describe("convertRangeToFizzBuzz()", function() {
+		it("returns in correct order", function() {
+			expect(f.convertRangeToFizzBuzz(1, 3)).to.be
+					.eql([ "1", "2", "Fizz" ]);
+		});
+
+		it("applies FizzBuzz to every number in the range", function() {
+			var spy = sinon.spy(f, "convertToFizzBuzz");
+			f.convertRangeToFizzBuzz(1, 50);
+			for (var i = 1; i <= 50; i++) {
+				expect(spy.withArgs(i).calledOnce).to.be.eql(true,
+						"Expected convertToFizzBuzz to be called with " + i);
+			}
+			f.convertToFizzBuzz.restore();
 		});
 	});
 });
